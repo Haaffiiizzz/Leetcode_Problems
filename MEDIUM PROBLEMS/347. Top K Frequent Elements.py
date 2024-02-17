@@ -4,4 +4,4 @@ numCount = []
 for num in set(nums):
     numCount.append([num, nums.count(num)])
 numCount.sort(reverse=True, key = lambda x: x[1])   
-print([i[0] for i in numCount[0:k] ])      #return instead
+print([i[0] for i in numCount[0:k] ])      #use return instead
