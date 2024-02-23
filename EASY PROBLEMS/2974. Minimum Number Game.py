@@ -6,4 +6,4 @@ bob = [i for i in nums[1::2]]
 for i in range(len(bob)):
     arr.append(bob[i])
     arr.append(alice[i])
-print(arr)   # append instead    
+print(arr)   #   append instead    
