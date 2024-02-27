@@ -13,4 +13,4 @@ while last> first:
             first = middle + 1
 nums.append(target)
 nums.sort()
-print(nums.index(target))    #return instead
+print(nums.index(target))    # use return instead
