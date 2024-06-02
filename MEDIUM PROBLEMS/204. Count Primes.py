@@ -5,7 +5,7 @@ def prime(num):
         return True
     if num % 2 == 0:
         return False
-    for i in range(3, num, 2):
+    for i in range(3, num//2 + 1, 2):
         if num % i == 0:
             return False
     return True
