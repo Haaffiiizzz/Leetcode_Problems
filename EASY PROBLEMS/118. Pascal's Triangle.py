@@ -1,16 +1,16 @@
-numRows = 5    # for test
+rowIndex = 3    # for test
 
 
-if numRows == 1:
-    print([[1]])    # return instead
+if rowIndex == 0:
+    print([1])    # return instead
     quit()
-if numRows == 2:
-    print([[1], [1, 1]])   # return instead
+if rowIndex == 1:
+    print([1, 1])   # return instead
     quit()
 
 i = 2
 final = [[1],[1, 1]]
-while i < numRows:
+while i <= rowIndex:
     rowList = [1,1]
     for j in range(1, i):
         prev = final[i-1]
@@ -20,4 +20,4 @@ while i < numRows:
     final.append(rowList)
     i += 1
 
-print(final)    # return instead
+print(final[rowIndex])    # return instead
