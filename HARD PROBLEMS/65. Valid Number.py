@@ -1,20 +1,15 @@
-if s.isdigit():
-            return True
-        
-        if not s[0].isdigit() and s[0] != "-" and s[0] != "+" and s[0] != ".":
-            return False
-        
-        if "+" in s and "-" in s:
-            return False
-        
-        if "e" in s or "E" in s:
-            if "." in s[s.index(e):-1]:
-                return False
-            if s[s.index(e):-1]
-        
-        if not s.isdigit() and len(s) == 1:
-            return False
-        if len(set(s)) == 1 and not s.isdigit():
-            return False
-        
-        return True
+import re
+number_regex = re.compile(r"""
+^                      # Start of string
+[+-]?                  # Optional sign
+(                      # Group for number part
+    \d+(\.\d*)?          # Digits, optionally followed by a dot and more digits
+    |                    # OR
+    \.\d+                # A dot followed by digits
+)
+([eE][+-]?\d+)?        # Optional exponent part
+$                      # End of string
+""", re.VERBOSE)
+
+# Match the string against the regex
+return bool(number_regex.match(s))
