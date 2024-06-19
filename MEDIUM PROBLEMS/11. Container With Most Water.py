@@ -20,5 +20,5 @@ while left < right:
         else:
             calculate = True
         left += 1    
-print(result) # return instead 
+print(result) # return instead  
 
