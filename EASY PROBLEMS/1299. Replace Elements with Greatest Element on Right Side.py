@@ -1,4 +1,4 @@
-arr = [17,18,5,4,6,1]
+arr = [17,18,5,4,6,1]         # for test
 leng = len(arr)
 for i in range(leng-1):
     if i == leng - 2:
@@ -6,4 +6,6 @@ for i in range(leng-1):
     else:
         arr[i] = max(arr[i+1:leng])
 arr[-1] = -1
-print(arr)
+
+
+print(arr)         #return instead
