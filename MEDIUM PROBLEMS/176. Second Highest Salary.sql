@@ -4,3 +4,4 @@ order by salary desc
 offset 1
 limit 1)
 as SecondHighestSalary 
+-- back soon
