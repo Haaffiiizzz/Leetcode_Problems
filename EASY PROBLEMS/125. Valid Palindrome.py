@@ -9,3 +9,4 @@ for i in s:
         str += i
        
 print(str == str[::-1])        
+#comments
