@@ -22,3 +22,4 @@ def longestPalindrome(s: str) -> str:
         getSubstrings(s)
         return sorted(palindromes, key=len, reverse=True)[0]
 print(longestPalindrome("abb"))
+#works but need to work on the efficiency so leetcpde accepts it
