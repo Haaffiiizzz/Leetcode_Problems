@@ -3,23 +3,35 @@ def longestPalindrome(s: str) -> str:
             return s
         if len(set(s)) == 1:
             return s
-        palindromes = []
+        
+        
+        
+        
         def isPalindrome(word):
             reversedWord = word[::-1]
             return word == reversedWord
         
         
         def getSubstrings(word):
+            longestCount = 0
+            longestPalindrome = ""
+            
             for i in range(0, len(word)):
+                
                 for j in range(1, len(word)+1):
+                    if j - i < longestCount:
+                        continue
                     newWord = word[i:j]
                     print("newword", newWord)
                     if isPalindrome(newWord):
+                        longestCount = len(newWord)
+                        if longestCount == len(word):
+                            return newWord
                         print("palindrome", newWord)
-                        palindromes.append(newWord)
+                        longestPalindrome = newWord
+            return longestPalindrome
                         
             
-        getSubstrings(s)
-        return sorted(palindromes, key=len, reverse=True)[0]
-print(longestPalindrome("abb"))
-#works but need to work on the efficiency so leetcpde accepts it
+        return getSubstrings(s)
+        
+print("l0ngest", longestPalindrome("jaliztdispcppzgzjxnjxwbhhtbjrijyibqwrhwuscmokylygielwssuyretqnoiglvsltmhetvdoliwibrnwmdtauczcswuqxxokaykslfzgxovphdptgtrbbozdkdgawcegemkumgbyqzjrzurkdaibfwwvcxfcstvixisrcfxvnlzizlbnacxssetlsxrvcaqvzmbnzdfmtskmxmjblzgpdsjvhqhrihiajvwxbmjsncjhmilercbdbzyncrnlyrxrefaeuttkscfttqnedzvqisclbremuxmngrpgqjqkijpizkixkrgaarpknivrrirbkeddkulvlfuetbdnugzodbfufqhrpkyufhrhnnnzsenkvqsuhlbaimniusuxsnmavqbilzgsfxjykrxdkkpnneikwlucdghnikojythrpgwyzoqgraycavrivsbfuaonssmryhcykooivrxmeeowllsfeyxrznvkdpobohpzolnpbxjjxbpnlozphobopdkvnzrxyefsllwoeemxrviookychyrmssnoaufbsvirvacyargqozywgprhtyjokinhgdculwkiennpkkdxrkyjxfsgzlibqvamnsxusuinmiablhusqvknesznnnhrhfuykprhqfufbdozgundbteuflvlukddekbrirrvinkpraagrkxikzipjikqjqgprgnmxumerblcsiqvzdenqttfcskttueaferxrylnrcnyzbdbcrelimhjcnsjmbxwvjaihirhqhvjsdpgzlbjmxmkstmfdznbmzvqacvrxsltessxcanblzizlnvxfcrsixivtscfxcvwwfbiadkruzrjzqybgmukmegecwagdkdzobbrtgtpdhpvoxgzflskyakoxxquwsczcuatdmwnrbiwilodvtehmtlsvlgionqteryusswleigylykomcsuwhrwqbiyjirjbthhbwxjnxjzgzppcpsidtzilaj"))
