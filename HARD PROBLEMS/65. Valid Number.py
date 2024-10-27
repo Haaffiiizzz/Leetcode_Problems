@@ -11,5 +11,5 @@ number_regex = re.compile(r"""
 $                      # End of string
 """, re.VERBOSE)
 
-# Match the string against the regex
+# Match the string against the rege x
 return bool(number_regex.match(s))
