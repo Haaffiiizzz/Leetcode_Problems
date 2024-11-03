@@ -8,9 +8,9 @@ class Solution:
         
         for i in range(length):
             for j in range(length):
-                new = (j, length - i- 1)
+                newIndex = (j, length - i- 1)
                 value = matrix[i][j]
-                holdDict[new] = value
+                holdDict[newIndex] = value
         
         for key, value in holdDict.items():
             matrix[key[0]][key[1]] = value
