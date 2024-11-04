@@ -22,12 +22,5 @@ class Solution:
             comp += first
             index += 1
         return comp
-            
-                    
-                    
-                
-                
-        
-        
-word = "aaaaaaaaaaaaaabb" #"aaabbcdaa"
+word = "abcde"
 print(Solution.compressedString(word))
