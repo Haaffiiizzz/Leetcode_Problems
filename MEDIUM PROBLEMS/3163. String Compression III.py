@@ -14,16 +14,20 @@ class Solution:
                     forward = None
                 if first == forward:
                     count += 1
+                    index += 1
+                    
                 else:
                     break
-                index = index + count
-                comp += str(count)
-                comp += first
-            
-            
-            print(count)
-            
+            comp += str(count)
+            comp += first
+            index += 1
         return comp
             
-word = "aaaaaaaaaaaaaabb"
+                    
+                    
+                
+                
+        
+        
+word = "aaaaaaaaaaaaaabb" #"aaabbcdaa"
 print(Solution.compressedString(word))
