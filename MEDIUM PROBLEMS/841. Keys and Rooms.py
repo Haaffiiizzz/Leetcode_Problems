@@ -23,7 +23,7 @@ class Solution:
             opened[key] = True
         return not False in opened
 '''   
-# leetcode solution. willl try mine later 
+# leetcode solution. will try mine later 
 rooms = [[1],[2],[3],[]]
 print(Solution.canVisitAllRooms(rooms))
         
