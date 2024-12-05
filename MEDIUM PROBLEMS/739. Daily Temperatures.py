@@ -1,19 +1,18 @@
-temperatures = [73,74,75,71,69,72,76,73]
-
-days = []
-
-for i in range(len(temperatures)):
-    num = 0
-    j = i + 1
-    if j < len(temperatures) - 1:
-        while temperatures[j] < temperatures[i]:
-            try:
-                print(temperatures[j+1])
-                num += 1
-                j += 1
-            except Exception:
-                break    
+class Solution:
+    def dailyTemperatures(temperatures: list[int]) -> list[int]:
+        length = len(temperatures)
+        waitDays = [0] * length
+        stack = []
+        for index, temp in enumerate(temperatures):
+            while stack and temperatures[stack[-1]] < temp:
+                previous = stack.pop()
+                waitDays[previous] = index - previous
+            stack.append(index)  
             
-    
-    days.append(num)  
-print(days)    
+        return waitDays         
+                    
+                    
+        
+        
+temperatures = [73,74,75,71,69,72,76,73]
+print(Solution.dailyTemperatures(temperatures))
