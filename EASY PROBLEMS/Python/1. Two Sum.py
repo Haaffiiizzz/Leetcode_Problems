@@ -1,9 +1,14 @@
 class Solution:
-    def twoSum(self, nums: List[int], target: int) -> List[int]:
+    def twoSum(self, nums: list[int], target: int) -> list[int]:
+        complements = {}
         for i in range(len(nums)):
             ans = target - nums[i]
             
-            if ans in nums[i+1:] and ans != nums[i]:
-                return [i, nums.index(ans)]
-            elif ans in nums[i+1:]:
-                return [i, nums[i+1:].index(ans)+i+1]
+            if ans in complements:
+                return [i, complements[ans]]
+            complements[nums[i]] = i
+            
+nums = [2,7,11,15]
+target = 9
+solution = Solution()
+print(Solution.twoSum(nums, target))
