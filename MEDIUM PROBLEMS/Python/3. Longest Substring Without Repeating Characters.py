@@ -1,24 +1,17 @@
+class Solution:
+    def lengthOfLongestSubstring(self, s: str) -> int:
+        
+        left = 0
+        maxLength = 0
+        chars = set()
 
-s = "b"
-
-
-length = len(s)
-longest = 0
-index = 0
-present = ""
-
-while length - index > longest:
-    count = 0
-    for word in s[index:]:
-        if word not in present:
-            present += word
-            count += 1
-        else:
-            index += 1
-            present = ""
-            break
-    longest = max(count, longest)   
-print(longest) 
-            
-    
-    
+        for right in range(len(s)):
+            while s[right] in chars:
+                chars.remove(s[left])
+                left += 1
+            chars.add(s[right])
+            maxLength = max(maxLength, right - left + 1)
+        return maxLength
+s = "dvdf"
+solution = Solution()
+print(solution.lengthOfLongestSubstring(s))
