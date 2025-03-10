@@ -1,12 +1,25 @@
-import string
-s = "A man, a plan, a canal: Panama"
-s = s.lower()
-strings = string.ascii_letters
+class Solution:
+    def isPalindrome(self, s: str) -> bool:
+        left = 0
+        right = len(s) - 1
 
-str = ""
-for i in s:
-    if i in strings or i.isdigit():
-        str += i
-       
-print(str == str[::-1])        
-#comments
+        while right >= left:
+
+            if s[right].isalnum() and s[left].isalnum():
+                if s[right].lower() != s[left].lower():
+                    
+                    return False
+                left +=1 
+                right -= 1
+            
+            else:
+                if not s[right].isalnum():
+                    right -= 1
+                if not s[left].isalnum():
+                    left += 1
+        
+        return True
+
+s = "A man, a plan, a canal: Panama"
+solution = Solution()
+print(solution.isPalindrome(s))
