@@ -13,3 +13,4 @@ class Solution:
 arr = [2,6,4,1]
 solution = Solution()
 print(solution.threeConsecutiveOdds(arr))
+
