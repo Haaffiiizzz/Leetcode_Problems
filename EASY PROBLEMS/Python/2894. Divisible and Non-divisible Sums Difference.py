@@ -14,3 +14,4 @@ n = 10
 m = 3
 solution = Solution()
 print(solution.differenceOfSums(n,  m))
+#solved this before. Apparently theres a one line formular solution for it.
