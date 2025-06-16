@@ -15,3 +15,4 @@ class Solution:
 nums = [7,1,5,4]
 solution = Solution()
 print(solution.maximumDifference(nums))
+#
