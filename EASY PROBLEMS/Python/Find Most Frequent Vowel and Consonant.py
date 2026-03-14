@@ -11,6 +11,6 @@ class Solution:
                 consFreq = max(consFreq, s.count(i))
         
         return consFreq + vowelFreq
-s = "successes"
+s = "successes"                 
 solution = Solution()
 print(solution.maxFreqSum(s))
